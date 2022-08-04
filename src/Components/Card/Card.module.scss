@@ -1,0 +1,95 @@
+.card {
+    background-image: url('/images/cardBox.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    backdrop-filter: blur(100px);
+    margin: 4rem;
+    height: 350px;
+    width: 291px;
+    padding-top: 4.5rem;
+}
+
+.iconLogo {
+    background-image: url('/images/circle.svg');
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 6rem;
+    height: 6rem;
+}
+
+.iconImage {
+    max-width: 50%;
+}
+
+.popularIconImage {
+    height: 22px;
+    width: 22px;
+    margin: 10px 8px;
+}
+
+.cardText {
+    font-family: Tomorrow;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #737bae;
+    margin: 5px 0;
+}
+
+.priceBox {
+    background-image: url('/images/priceBox.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popularBox {
+    background-image: url('/images/smallBox.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 31px;
+    text-align: center;
+    color: #ecf0ff;
+    opacity: 0.9;
+    width: fit-content;
+}
+
+.percentageChange {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 31px;
+    margin-right: -2rem;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.green {
+    color: #00ffa3;
+}
+
+.red {
+    color: #ff4d4d;
+}
