@@ -1,12 +1,10 @@
 import React from 'react';
 import './App.css';
-import TredningAssets from './Components/TrendingAssets.tsx';
+import TrendingAssets from './Components/TrendingAssets.tsx';
 
 function App() {
   return (
-    <div>
-      <TredningAssets />
-    </div>
+      <TrendingAssets />
   );
 }
 

@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { FC } from 'react'
 import style from './Card.module.scss'
 
-const Card = ({ asset,popularPairs }) => {
+interface asset {
+    id: string
+    name: string
+    symbol: string
+    image: string
+    current_price: number
+    market_cap: number
+    market_cap_rank: number
+    price_change_percentage_24h: number
+}
+
+interface CardProps {
+    asset: asset
+    popularPairs: Array<string>
+}
+
+const Card: FC<CardProps> = ({ asset, popularPairs }) => {
     return (
         <div className={style.card}>
             <div className={style.iconLogo}>
@@ -26,7 +42,9 @@ const Card = ({ asset,popularPairs }) => {
                             : style.green
                     }`}
                 >
-                    {(asset.price_change_percentage_24h < 0?"":"+")+asset.price_change_percentage_24h.toFixed(2)+"%"}
+                    {(asset.price_change_percentage_24h < 0 ? '' : '+') +
+                        asset.price_change_percentage_24h.toFixed(2) +
+                        '%'}
                 </p>
             </div>
             <h2 className={style.cardText}>Price</h2>
@@ -37,11 +55,13 @@ const Card = ({ asset,popularPairs }) => {
             </div>
             <h2 className={style.cardText}>TVL</h2>
             <div className={style.popularBox}>
-                {
-                    popularPairs.map(image=>(
-                        <img className={style.popularIconImage} src={image} alt="" />
-                    ))
-                }
+                {popularPairs.map((image) => (
+                    <img
+                        className={style.popularIconImage}
+                        src={image}
+                        alt=""
+                    />
+                ))}
             </div>
             <h2 className={style.cardText}>Popular pairs</h2>
         </div>
