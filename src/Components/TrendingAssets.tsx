@@ -57,7 +57,6 @@ const TredningAssets = () => {
                     pageRangeDisplayed={1}
                     pageCount={10}
                     previousLabel="<"
-                    renderOnZeroPageCount={null}
                 />
             </div>
         </div>
